@@ -17,6 +17,7 @@
       }
 
       div {
+        color: white;
         position: absolute;
         font-size: 200px;
         font-family: 'M PLUS 1p', sans-serif;
@@ -37,7 +38,7 @@
     </style>
 <script type="text/javascript">
   $(function() {
-    $(".div1").each(function(index) {
+    $("div").each(function(index) {
       let x = Math.round(Math.random() * 1500)
       let y = Math.round(Math.random() * 1500)
       let r = 255
@@ -50,25 +51,6 @@
       })
       $(this).on("mouseenter", function() {
         let y = Math.round(Math.random() * 1) - 100
-        $(this).css({
-          "top": y + "px"
-        })
-      })
-    })
-
-    $(".div2").each(function(index) {
-      let x = Math.round(Math.random() * 1500)
-      let y = Math.round(Math.random() * 1500)
-      let r = 255
-      let g = 25
-      let b = 163
-      let color = [r, g, b].join()
-      $(this).css({
-        "left": x + "px",
-        "color": "rgb(" + color + ")"
-      })
-      $(this).on("mouseenter", function() {
-        let y = Math.round(Math.random() * 1) + 100
         $(this).css({
           "top": y + "px"
         })
